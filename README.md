@@ -1,6 +1,6 @@
 # Welcome to Weathering Forecast Web App
 
-This project was design and created by Carrie A. Yu.
+This project was design and created by Carrie A. Yu. It a Weathering Forecast app. Inputs a certain city, and displays the weather forecast on that city. With github authentication. You can login using your github account. Retrieves github use details.
 
 ## Available Scripts
 
