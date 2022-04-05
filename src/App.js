@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useReducer } from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+
+import Home from './components/Home';
+import Landing from './components/landing';
+import weatherforecast from './components/weather';
+import { initialState, reducer } from './reducer';
+
+export const AuthContext = createContext();
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return(
+    <AuthContext.Provider
+      value={{
+        state,
+        dispatch
+      }}
+      >
+        <Router>
+          <Switch>
+            <Route path="/landing" component={Landing}/>
+            <Route exact path="/" component={Home}/>
+            <Route path="/weatherforecast" component={weatherforecast} />
+          </Switch>
+        </Router>
+      </AuthContext.Provider>
+  )
 }
 
 export default App;

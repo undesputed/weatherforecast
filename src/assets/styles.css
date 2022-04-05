@@ -1,0 +1,171 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
+
+.main{
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #01579b;
+}
+
+.top{
+    height: 60px;
+    background-color: #424242;
+    color: whitesmoke;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    font-family: 'Recursive', sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    background-color: #424242;
+    color: whitesmoke;
+    margin: 10px 0px 0px 10px;
+    font-size: 25px;
+    border-radius: 20px 20px 0 0;
+    font-family: 'Recursive', sans-serif;
+}
+
+.button{
+    width: 35px;
+    height: 35px;
+}
+
+.day{
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.temp{
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Recursive', sans-serif;
+    font-size: 18px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sunrise-sunset{
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Recursive', sans-serif;
+    font-size: 16px;
+}
+
+.description{
+    padding: 15px;
+    color: whitesmoke;
+    font-family: 'Recursive', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.forecast{
+    border-radius: 20px;
+    background-color: #01579b;
+    color: whitesmoke;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Recursive', sans-serif;
+    font-size: 19px;
+}
+
+.flex-forecast{
+    display: flex;
+    justify-content: space-between;
+} */
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+table * {
+    position: relative;
+}
+table td, table th {
+    padding-left: 8px;
+}
+table thead tr {
+    height: 60px;
+    background: #ffed86;
+    font-size: 16px;
+}
+table tbody tr {
+    height: 48px;
+    border-bottom: 1px solid #e3f1d5;
+}
+table tbody tr:last-child {
+    border: 0;
+}
+table td, table th {
+    text-align: left;
+}
+table td.l, table th.l {
+    text-align: right;
+}
+table td.c, table th.c {
+    text-align: center;
+}
+table td.r, table th.r {
+    text-align: center;
+}
+@media screen and (max-width: 35.5em) {
+    table {
+        display: block;
+   }
+    table > *, table tr, table td, table th {
+        display: block;
+   }
+    table thead {
+        display: none;
+   }
+    table tbody tr {
+        height: auto;
+        padding: 8px 0;
+   }
+    table tbody tr td {
+        padding-left: 45%;
+        margin-bottom: 12px;
+   }
+    table tbody tr td:last-child {
+        margin-bottom: 0;
+   }
+    table tbody tr td:before {
+        position: absolute;
+        font-weight: 700;
+        width: 40%;
+        left: 10px;
+        top: 0;
+   }
+    table tbody tr td:nth-child(1):before {
+        content: "Date";
+   }
+    table tbody tr td:nth-child(2):before {
+        content: "Temperature";
+   }
+    table tbody tr td:nth-child(3):before {
+        content: "Description";
+   }
+    table tbody tr td:nth-child(4):before {
+        content: "Main";
+   }
+    table tbody tr td:nth-child(5):before {
+        content: "Pressure";
+   }
+    table tbody tr td:nth-child(6):before {
+        content: "Humidity";
+    }
+}
